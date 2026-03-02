@@ -15,3 +15,5 @@ class ModernClockApp:
         self.root.title("Modern Clock")
         self.root.geometry("500x650")
         self.root.resizable(False, False)
+
+        self.style = ttk.Style("darkly")
