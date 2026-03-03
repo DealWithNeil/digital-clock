@@ -19,3 +19,4 @@ class ModernClockApp:
         self.style = ttk.Style("darkly")
 
         self.notebook = ttk.Notebook(root)
+        self.notebook.pack(fill=BOTH, expand=True, padx=10, pady=10)
