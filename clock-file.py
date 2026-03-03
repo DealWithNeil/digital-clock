@@ -17,3 +17,5 @@ class ModernClockApp:
         self.root.resizable(False, False)
 
         self.style = ttk.Style("darkly")
+
+        self.notebook = ttk.Notebook(root)
