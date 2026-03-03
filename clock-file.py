@@ -20,3 +20,9 @@ class ModernClockApp:
 
         self.notebook = ttk.Notebook(root)
         self.notebook.pack(fill=BOTH, expand=True, padx=10, pady=10)
+        
+        self.create_clock_tab()
+        self.create_world_time_tab()
+        self.create_stopwatch_tab()
+        self.create_timer_tab()
+        self.create_alarm_tab()
