@@ -48,3 +48,9 @@ class ModernClockApp:
         def create_world_time_tab(self):
             self.world_tab = ttk.Frame(self.notebook)
             self.notebook.add(self.world_tab, text="World Time")
+
+            self.city_var = tk.StringVar()
+            cities = ["UTC", "US/Eastern", "Europe/London", "Asia/Tokyo", "Asia/Kolkata"]
+            self.city_menu = ttk.Combobox(self.world_tab, values=cities, textvariable=self.city_var)
+            self.city_menu.current(0)
+            self.city_menu.pack(pady=20)
