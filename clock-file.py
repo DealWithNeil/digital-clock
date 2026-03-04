@@ -44,3 +44,7 @@ class ModernClockApp:
             now = datetime.now().strftime("%H:%M:%S")
             self.clock_label.config(text=now)
             self.root.after(1000, self.update_clock)
+
+        def create_world_time_tab(self):
+            self.world_tab = ttk.Frame(self.notebook)
+            self.notebook.add(self.world_tab, text="World Time")
