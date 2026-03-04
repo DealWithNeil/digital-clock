@@ -26,3 +26,16 @@ class ModernClockApp:
         self.create_stopwatch_tab()
         self.create_timer_tab()
         self.create_alarm_tab()
+
+    def create_clock_tab(self):
+        self.clock_tab = ttk.Frame(self.notebook)
+        self.notebook.add(self.clock_tab, text="Clock")
+
+        self.clock_label = ttk.Label(
+            self.clock_tab,
+            font=("Segoe UI", 50, "bold"),
+            anchor="center"
+        )
+        self.clock_label.pack(pady=120)
+
+        self.update_clock()
