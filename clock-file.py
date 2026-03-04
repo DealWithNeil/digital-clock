@@ -39,3 +39,8 @@ class ModernClockApp:
         self.clock_label.pack(pady=120)
 
         self.update_clock()
+
+        def update_clock(self):
+            now = datetime.now().strftime("%H:%M:%S")
+            self.clock_label.config(text=now)
+            self.root.after(1000, self.update_clock)
