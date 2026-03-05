@@ -57,3 +57,5 @@ class ModernClockApp:
 
             self.world_label = ttk.Label(self.world_tab, font=("Segoe UI", 35))
             self.world_label.pack(pady=50)
+
+            ttk.Button(self.world_tab, text="Show Time", command=self.show_world_time).pack()
