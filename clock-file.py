@@ -54,3 +54,6 @@ class ModernClockApp:
             self.city_menu = ttk.Combobox(self.world_tab, values=cities, textvariable=self.city_var)
             self.city_menu.current(0)
             self.city_menu.pack(pady=20)
+
+            self.world_label = ttk.Label(self.world_tab, font=("Segoe UI", 35))
+            self.world_label.pack(pady=50)
