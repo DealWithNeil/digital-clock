@@ -69,4 +69,12 @@ class ModernClockApp:
             self.stopwatch_tab = ttk.Frame(self.notebook)
             self.notebook.add(self.stopwatch_tab, text="Stopwatch")   
 
+                self.running = False
+                self.elapsed = timedelta()
+
+                self.stopwatch_label = ttk.Label(self.stopwatch_tab, font=("Segoe UI", 40))
+                self.stopwatch_label.pack(pady=80)
+                self.stopwatch_label.config(text="00:00:00")
+
+
           
