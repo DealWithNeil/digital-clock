@@ -65,6 +65,8 @@ class ModernClockApp:
             city_time = datetime.now(timezone).strftime("%H:%M:%S")
             self.world_label.config(text=city_time)  
 
-            
+        def create_stopwatch_tab(self):
+            self.stopwatch_tab = ttk.Frame(self.notebook)
+            self.notebook.add(self.stopwatch_tab, text="Stopwatch")   
 
           
