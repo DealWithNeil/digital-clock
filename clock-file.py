@@ -60,4 +60,11 @@ class ModernClockApp:
 
             ttk.Button(self.world_tab, text="Show Time", command=self.show_world_time).pack()
 
+        def show_world_time(self):
+            timezone = pytz.timezone(self.city_var.get())
+            city_time = datetime.now(timezone).strftime("%H:%M:%S")
+            self.world_label.config(text=city_time)  
+
+            
+
           
