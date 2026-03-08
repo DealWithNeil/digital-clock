@@ -88,3 +88,8 @@ class ModernClockApp:
                     self.running = True
                     self.start_time = datetime.now() - self.elapsed
                     self.update_stopwatch()
+
+            def stop_stopwatch(self):
+                self.running = False
+
+                
