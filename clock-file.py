@@ -92,4 +92,6 @@ class ModernClockApp:
             def stop_stopwatch(self):
                 self.running = False
 
+            def reset_stopwatch(self):
                 
+
