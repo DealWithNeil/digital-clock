@@ -99,4 +99,7 @@ class ModernClockApp:
 
             def update_stopwatch(self):
                 if self.running:
+                    self.elapsed = datetime.now() - self.start_time
+                    self.stopwatch_label.config(text=str(self.elapsed).split('.')[0])
+                    self.root.after(1000, self.update_stopwatch)
 
