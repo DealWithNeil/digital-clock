@@ -97,3 +97,5 @@ class ModernClockApp:
                 self.elapsed = timedelta()
                 self.stopwatch_label.config(text="00:00:00")
 
+            def update_stopwatch(self):
+
