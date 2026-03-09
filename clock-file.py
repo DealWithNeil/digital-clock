@@ -98,4 +98,5 @@ class ModernClockApp:
                 self.stopwatch_label.config(text="00:00:00")
 
             def update_stopwatch(self):
+                if self.running:
 
