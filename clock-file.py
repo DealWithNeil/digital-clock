@@ -104,3 +104,4 @@ class ModernClockApp:
                     self.root.after(1000, self.update_stopwatch)
 
             def create_timer_tab(self):
+                self.timer_tab = ttk.Frame(self.notebook)
