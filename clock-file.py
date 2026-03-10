@@ -103,3 +103,4 @@ class ModernClockApp:
                     self.stopwatch_label.config(text=str(self.elapsed).split('.')[0])
                     self.root.after(1000, self.update_stopwatch)
 
+            def create_timer_tab(self):
