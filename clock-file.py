@@ -108,3 +108,4 @@ class ModernClockApp:
                 self.notebook.add(self.timer_tab, text="Timer")
 
                 self.timer_entry = ttk.Entry(self.timer_tab)
+                self.timer_entry.pack(pady=20)
