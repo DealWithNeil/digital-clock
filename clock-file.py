@@ -112,3 +112,4 @@ class ModernClockApp:
                 self.timer_entry.insert(0, "10")
 
                 self.timer_label = ttk.Label(self.timer_tab, font=("Segoe UI", 40))
+                self.timer_label.pack(pady=40)
