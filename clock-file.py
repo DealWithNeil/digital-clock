@@ -113,3 +113,5 @@ class ModernClockApp:
 
                 self.timer_label = ttk.Label(self.timer_tab, font=("Segoe UI", 40))
                 self.timer_label.pack(pady=40)
+
+                ttk.Button(self.timer_tab, text="Start Timer", command=self.start_timer).pack(
