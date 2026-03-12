@@ -116,4 +116,4 @@ class ModernClockApp:
 
                 ttk.Button(self.timer_tab, text="Start Timer", command=self.start_timer).pack()
 
-                
+            def start_timer(self):    
