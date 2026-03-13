@@ -120,3 +120,5 @@ class ModernClockApp:
                 
                 seconds = int(self.timer_entry.get())
                 threading.Thread(target=self.run_timer, args=(seconds,), daemon=True).start()
+
+            def run_timer(self, seconds):
