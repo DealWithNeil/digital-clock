@@ -122,3 +122,9 @@ class ModernClockApp:
                 threading.Thread(target=self.run_timer, args=(seconds,), daemon=True).start()
 
             def run_timer(self, seconds):
+                while seconds >= 0:
+                    mins, secs = divmod(seconds, 60)
+                    timeformat = f"{mins:02}:{secs:02}"
+                    self.timer_label.config(text=timeformat)
+                    time.sleep(1)
+                    seconds -= 1
