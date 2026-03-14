@@ -128,5 +128,6 @@ class ModernClockApp:
                     self.timer_label.config(text=timeformat)
                     time.sleep(1)
                     seconds -= 1
+                    
                 winsound.Beep(1000, 1000)
                 messagebox.showinfo("Timer", "Time's up!")
