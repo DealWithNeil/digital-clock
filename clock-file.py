@@ -131,3 +131,5 @@ class ModernClockApp:
                     
                 winsound.Beep(1000, 1000)
                 messagebox.showinfo("Timer", "Time's up!")
+
+            def create_alarm_tab(self):
