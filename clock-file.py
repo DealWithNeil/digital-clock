@@ -133,3 +133,4 @@ class ModernClockApp:
                 messagebox.showinfo("Timer", "Time's up!")
 
             def create_alarm_tab(self):
+                self.alarm_tab = ttk.Frame(self.notebook)
