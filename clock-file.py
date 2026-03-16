@@ -137,3 +137,4 @@ class ModernClockApp:
                 self.notebook.add(self.alarm_tab, text="Alarm")
 
                 self.alarm_entry = ttk.Entry(self.alarm_tab)
+                self.alarm_entry.pack(pady=20)
