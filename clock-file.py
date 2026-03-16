@@ -138,3 +138,4 @@ class ModernClockApp:
 
                 self.alarm_entry = ttk.Entry(self.alarm_tab)
                 self.alarm_entry.pack(pady=20)
+                self.alarm_entry.insert(0, "07:00:00")
