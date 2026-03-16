@@ -135,3 +135,5 @@ class ModernClockApp:
             def create_alarm_tab(self):
                 self.alarm_tab = ttk.Frame(self.notebook)
                 self.notebook.add(self.alarm_tab, text="Alarm")
+
+                self.alarm_entry = ttk.Entry(self.alarm_tab)
