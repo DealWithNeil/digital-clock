@@ -144,3 +144,4 @@ class ModernClockApp:
 
             def set_alarm(self):
                 alarm_time = self.alarm_entry.get()
+                threading.Thread(target=self.check_alarm, args=(alarm_time,), daemon=True).start()
