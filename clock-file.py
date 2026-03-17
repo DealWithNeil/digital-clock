@@ -143,3 +143,4 @@ class ModernClockApp:
                 ttk.Button(self.alarm_tab, text="Set Alarm", command=self.set_alarm).pack()
 
             def set_alarm(self):
+                alarm_time = self.alarm_entry.get()
