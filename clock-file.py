@@ -157,3 +157,4 @@ class ModernClockApp:
                     time.sleep(1)
 
             if __name__ == "__main__":
+                root = ttk.Window(themename="darkly")
