@@ -155,3 +155,5 @@ class ModernClockApp:
                         messagebox.showinfo("Alarm", "Alarm ringing!")
                         break
                     time.sleep(1)
+
+            if __name__ == "__main__":
