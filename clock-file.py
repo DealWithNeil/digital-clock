@@ -148,3 +148,10 @@ class ModernClockApp:
                 messagebox.showinfo("Alarm", f"Alarm set for {alarm_time}")
 
             def check_alarm(self, alarm_time):
+                while True:
+                    now = datetime.now().strftime("%H:%M:%S")
+                    if now == alarm_time:
+                        winsound.Beep(1000, 1000)
+                        messagebox.showinfo("Alarm", "Alarm ringing!")
+                        break
+                    time.sleep(1)
