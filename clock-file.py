@@ -159,4 +159,4 @@ class ModernClockApp:
             if __name__ == "__main__":
                 root = ttk.Window(themename="darkly")
                 app = ModernClockApp(root)
-                root.mainloop()
+                root.mainloop() 
