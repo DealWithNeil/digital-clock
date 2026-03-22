@@ -37,13 +37,13 @@ class ClockApp:
         font=("Courier", 60, "bold"),  # dot-matrix feel
         letterspacing=5 if hasattr(tk.Label, 'letterspacing') else 0
         )
-        
+
         self.clock_label.pack(expand=True)
 
         self.update_clock()
 
     def update_clock(self):
-        now = datetime.now().strftime("%H:%M:%S")
+        now = datetime.now().strftime("%H %M %S") 
         self.clock_label.config(text=now)
         self.root.after(1000, self.update_clock)
 
