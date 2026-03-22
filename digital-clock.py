@@ -12,7 +12,7 @@ class ClockApp:
         self.root.geometry("500x650")
         self.root.resizable(False, False)
 
-        self.notebook = ttk.Notebook(root)
+        self.main_container = tk.Frame(root, bg="black")
         self.notebook.pack(fill=BOTH, expand=True, padx=10, pady=10)
 
         self.create_clock_tab()
