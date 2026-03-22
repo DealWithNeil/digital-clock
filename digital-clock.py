@@ -31,6 +31,8 @@ class ClockApp:
                 font=("Courier", 14, "bold"),
                 command=lambda name=b: self.show_panel(name)
             )
+            btn.pack(side="left", expand=True, fill="x", padx=2, pady=2)
+        self.nav_buttons[b] = btn
 
         self.create_clock_tab()
         self.create_world_time_tab()
