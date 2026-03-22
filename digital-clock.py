@@ -21,6 +21,16 @@ class ClockApp:
         self.nav_buttons = {}
         for b in buttons:
             btn = tk.Button(
+                self.nav_frame,
+                text=b,
+                fg="white",
+                bg="black",
+                activebackground="white",
+                activeforeground="black",
+                bd=0,
+                font=("Courier", 14, "bold"),
+                command=lambda name=b: self.show_panel(name)
+            )
 
         self.create_clock_tab()
         self.create_world_time_tab()
