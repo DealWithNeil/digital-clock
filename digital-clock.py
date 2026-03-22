@@ -29,8 +29,16 @@ class ClockApp:
         container = tk.Frame(tab, bg="black")
         container.pack(fill="both", expand=True)
 
-        self.clock_label = ttk.Label(tab, font=("Segoe UI", 50, "bold"))
-        self.clock_label.pack(pady=120)
+        self.clock_label = tk.Label(
+        container,
+        text="00:00:00",
+        fg="white",
+        bg="black",
+        font=("Courier", 60, "bold"),  # dot-matrix feel
+        letterspacing=5 if hasattr(tk.Label, 'letterspacing') else 0
+        )
+        
+        self.clock_label.pack(expand=True)
 
         self.update_clock()
 
