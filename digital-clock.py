@@ -26,6 +26,9 @@ class ClockApp:
         tab = ttk.Frame(self.notebook)
         self.notebook.add(tab, text="Clock")
 
+        container = tk.Frame(tab, bg="black")
+        container.pack(fill="both", expand=True)
+
         self.clock_label = ttk.Label(tab, font=("Segoe UI", 50, "bold"))
         self.clock_label.pack(pady=120)
 
