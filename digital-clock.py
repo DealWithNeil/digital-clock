@@ -45,7 +45,7 @@ class ClockApp:
     def update_clock(self):
         now = datetime.now().strftime("%H %M %S") 
         self.clock_label.config(text=now)
-        self.root.after(1000, self.update_clock)
+        
 
     # ---------------- WORLD TIME ---------------- #
     def create_world_time_tab(self):
