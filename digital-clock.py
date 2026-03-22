@@ -18,6 +18,8 @@ class ClockApp:
         self.nav_frame.pack(fill="x", side="bottom")
 
         buttons = ["Clock", "World Time", "Stopwatch", "Timer", "Alarm"]
+        self.nav_buttons = {}
+
 
         self.create_clock_tab()
         self.create_world_time_tab()
