@@ -13,7 +13,7 @@ class ClockApp:
         self.root.resizable(False, False)
 
         self.main_container = tk.Frame(root, bg="black")
-        self.notebook.pack(fill=BOTH, expand=True, padx=10, pady=10)
+        self.main_container.pack(fill="both", expand=True)
 
         self.create_clock_tab()
         self.create_world_time_tab()
