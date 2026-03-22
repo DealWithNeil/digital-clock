@@ -20,6 +20,7 @@ class ClockApp:
         buttons = ["Clock", "World Time", "Stopwatch", "Timer", "Alarm"]
         self.nav_buttons = {}
         for b in buttons:
+            btn = tk.Button(
 
         self.create_clock_tab()
         self.create_world_time_tab()
