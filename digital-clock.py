@@ -15,6 +15,7 @@ class ClockApp:
         self.main_container = tk.Frame(root, bg="black")
         self.main_container.pack(fill="both", expand=True)
         self.nav_frame = tk.Frame(root, bg="black")
+        self.nav_frame.pack(fill="x", side="bottom")
 
         self.create_clock_tab()
         self.create_world_time_tab()
