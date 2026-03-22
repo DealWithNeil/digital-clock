@@ -35,7 +35,6 @@ class ClockApp:
         fg="white",
         bg="black",
         font=("Courier", 60, "bold"),  # dot-matrix feel
-        letterspacing=5 if hasattr(tk.Label, 'letterspacing') else 0
         )
 
         self.clock_label.pack(expand=True)
