@@ -50,7 +50,9 @@ class ClockApp:
         )
         self.clock_label.pack(expand=True)
 
+        self.show_panel("Clock")
 
+        
         self.create_clock_tab()
         self.create_world_time_tab()
         self.create_stopwatch_tab()
