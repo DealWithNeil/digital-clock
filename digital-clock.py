@@ -36,7 +36,7 @@ class ClockApp:
 
         self.panels = {}
 
-            for name in buttons:
+        for name in buttons:
                 panel = tk.Frame(self.main_container, bg="black")
                 panel.place(relwidth=1, relheight=1)  # full container
                 self.panels[name] = panel
@@ -52,7 +52,7 @@ class ClockApp:
 
         self.show_panel("Clock")
 
-        
+
         self.create_clock_tab()
         self.create_world_time_tab()
         self.create_stopwatch_tab()
