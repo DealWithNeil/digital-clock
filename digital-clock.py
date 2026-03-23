@@ -48,6 +48,8 @@ class ClockApp:
             bg="black",
             font=("Courier", 60, "bold"),  # dot-matrix feel
         )
+        self.clock_label.pack(expand=True)
+
 
         self.create_clock_tab()
         self.create_world_time_tab()
