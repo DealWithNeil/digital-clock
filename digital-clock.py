@@ -34,6 +34,11 @@ class ClockApp:
             btn.pack(side="left", expand=True, fill="x", padx=2, pady=2)
         self.nav_buttons[b] = btn
 
+        self.panels = {}
+
+            for name in buttons:
+
+
         self.create_clock_tab()
         self.create_world_time_tab()
         self.create_stopwatch_tab()
@@ -64,6 +69,7 @@ class ClockApp:
         now = datetime.now().strftime("%H %M %S") 
         self.clock_label.config(text=now)
         self.root.after(1000, self.update_clock)
+        
 
     # ---------------- WORLD TIME ---------------- #
     def create_world_time_tab(self):
