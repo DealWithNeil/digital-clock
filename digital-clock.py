@@ -41,6 +41,13 @@ class ClockApp:
                 panel.place(relwidth=1, relheight=1)  # full container
                 self.panels[name] = panel
 
+        self.clock_label = tk.Label(
+            self.panels["Clock"],
+            text="00:00:00",
+            fg="white",
+            bg="black",
+            font=("Courier", 60, "bold"),  # dot-matrix feel
+        )
 
         self.create_clock_tab()
         self.create_world_time_tab()
