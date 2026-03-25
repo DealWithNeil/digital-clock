@@ -56,6 +56,8 @@ class ClockApp:
            for panel_name, panel in self.panels.items():
                 if panel_name == name:
                     panel.lift()  # bring to front
+                else:
+                    panel.lower()  # send to back
 
         self.create_clock_tab()
         self.create_world_time_tab()
