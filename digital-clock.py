@@ -186,6 +186,14 @@ class ClockApp:
         self.timer_canvas.create_oval(20, 20, 280, 280, outline="#222", width=10)
 
         self.timer_arc = self.timer_canvas.create_arc(
+            20, 20, 280, 280,
+                start=90,
+                extent=0,
+                style="arc",
+                outline="white",
+                width=10
+            )
+
 
     def start_timer(self):
         try:
