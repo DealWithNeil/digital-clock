@@ -173,6 +173,14 @@ class ClockApp:
 
         timer_panel = self.panels["Timer"]
 
+        self.timer_canvas = tk.Canvas(
+            timer_panel,
+            width=300,
+            height=300,
+            bg="black",
+            highlightthickness=0
+        )
+
     def start_timer(self):
         try:
             self.timer_seconds = int(self.timer_entry.get())
