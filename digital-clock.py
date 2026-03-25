@@ -54,7 +54,7 @@ class ClockApp:
 
         def show_panel(self, name):
            for panel_name, panel in self.panels.items():
-
+                if panel_name == name:
         self.create_clock_tab()
         self.create_world_time_tab()
         self.create_stopwatch_tab()
