@@ -205,6 +205,16 @@ class ClockApp:
         self.timer_entry.insert(0, "10")
         self.timer_entry.pack(pady=10)
 
+        tk.Button(
+                timer_panel,
+                text="Start",
+                command=self.start_timer,
+                bg="black",
+                fg="white",
+                bd=0
+            ).pack()
+
+
     def start_timer(self):
         try:
             self.timer_seconds = int(self.timer_entry.get())
