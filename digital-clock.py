@@ -201,6 +201,10 @@ class ClockApp:
             font=("Courier", 30, "bold")
         )
 
+        self.timer_entry = tk.Entry(timer_panel, justify="center")
+        self.timer_entry.insert(0, "10")
+        self.timer_entry.pack(pady=10)
+
     def start_timer(self):
         try:
             self.timer_seconds = int(self.timer_entry.get())
