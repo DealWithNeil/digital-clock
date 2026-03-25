@@ -53,7 +53,7 @@ class ClockApp:
         self.show_panel("Clock")
 
         def show_panel(self, name):
-
+           for panel_name, panel in self.panels.items():
 
         self.create_clock_tab()
         self.create_world_time_tab()
