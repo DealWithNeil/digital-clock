@@ -195,6 +195,8 @@ class ClockApp:
             )
 
 
+        self.timer_text = self.timer_canvas.create_text(
+
     def start_timer(self):
         try:
             self.timer_seconds = int(self.timer_entry.get())
