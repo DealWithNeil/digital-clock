@@ -195,6 +195,11 @@ class ClockApp:
             )
 
         self.timer_text = self.timer_canvas.create_text(
+            150, 150,
+            text="00",
+            fill="white",
+            font=("Courier", 30, "bold")
+        )
 
     def start_timer(self):
         try:
