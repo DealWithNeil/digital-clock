@@ -171,6 +171,8 @@ class ClockApp:
 
         ttk.Button(tab, text="Start Timer", command=self.start_timer).pack()
 
+        timer_panel = self.panels["Timer"]
+
     def start_timer(self):
         try:
             self.timer_seconds = int(self.timer_entry.get())
