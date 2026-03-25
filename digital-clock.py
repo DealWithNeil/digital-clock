@@ -181,6 +181,8 @@ class ClockApp:
             highlightthickness=0
         )
 
+        self.timer_canvas.pack(pady=40)
+
     def start_timer(self):
         try:
             self.timer_seconds = int(self.timer_entry.get())
