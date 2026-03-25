@@ -194,7 +194,6 @@ class ClockApp:
                 width=10
             )
 
-
         self.timer_text = self.timer_canvas.create_text(
 
     def start_timer(self):
