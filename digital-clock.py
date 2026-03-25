@@ -185,6 +185,8 @@ class ClockApp:
 
         self.timer_canvas.create_oval(20, 20, 280, 280, outline="#222", width=10)
 
+        self.timer_arc = self.timer_canvas.create_arc(
+
     def start_timer(self):
         try:
             self.timer_seconds = int(self.timer_entry.get())
