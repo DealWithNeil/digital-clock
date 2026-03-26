@@ -232,7 +232,11 @@ class ClockApp:
             )
 
         progress = (self.remaining_time / self.total_time) * 360
-        
+
+        self.timer_canvas.itemconfig(
+            self.timer_arc,
+            extent=-progress
+        )
     # ---------------- ALARM ---------------- #
     def create_alarm_tab(self):
         tab = ttk.Frame(self.notebook)
