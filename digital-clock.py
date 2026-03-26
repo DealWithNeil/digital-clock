@@ -217,11 +217,11 @@ class ClockApp:
 
     def start_timer(self):
         try:
-            self.timer_seconds = int(self.timer_entry.get())
-            self.timer_running = True
-            self.update_timer()
+            self.total_time = int(self.timer_entry.get())
+            self.remaining_time = self.total_time
+            self.update_timer_ring()
         except:
-            self.timer_label.config(text="Invalid")
+            self.timer_canvas.itemconfig(self.timer_text, text="ERR")
 
     def update_timer(self):
         if self.timer_running and self.timer_seconds >= 0:
