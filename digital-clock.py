@@ -223,14 +223,13 @@ class ClockApp:
         except:
             self.timer_canvas.itemconfig(self.timer_text, text="ERR")
 
-    def update_timer(self):
-        if self.timer_running and self.timer_seconds >= 0:
-            mins, secs = divmod(self.timer_seconds, 60)
-            self.timer_label.config(text=f"{mins:02}:{secs:02}")
-            self.timer_seconds -= 1
-            self.root.after(1000, self.update_timer)
-        elif self.timer_seconds < 0:
-            self.timer_label.config(text="Done 🔔")
+    def update_timer_ring(self):
+        if self.remaining_time >= 0:
+            # Update text
+            self.timer_canvas.itemconfig(
+                self.timer_text,
+                text=str(self.remaining_time)
+            )
 
     # ---------------- ALARM ---------------- #
     def create_alarm_tab(self):
