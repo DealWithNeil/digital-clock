@@ -231,6 +231,8 @@ class ClockApp:
                 text=str(self.remaining_time)
             )
 
+        progress = (self.remaining_time / self.total_time) * 360
+        
     # ---------------- ALARM ---------------- #
     def create_alarm_tab(self):
         tab = ttk.Frame(self.notebook)
