@@ -180,7 +180,7 @@ class ClockApp:
             bg="black",
             highlightthickness=0
         )
-
+   
         self.timer_canvas.pack(pady=40)
 
         self.timer_canvas.create_oval(20, 20, 280, 280, outline="#222", width=10)
