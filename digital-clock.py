@@ -237,6 +237,14 @@ class ClockApp:
             self.timer_arc,
             extent=-progress
         )
+
+        self.remaining_time -= 1
+        self.root.after(1000, self.update_timer_ring)
+            else:
+            
+                self.timer_canvas.itemconfig(self.timer_text, text="TIME UP")
+
+
     # ---------------- ALARM ---------------- #
     def create_alarm_tab(self):
         tab = ttk.Frame(self.notebook)
