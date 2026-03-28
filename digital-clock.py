@@ -117,7 +117,7 @@ class ClockApp:
     # ---------------- STOPWATCH ---------------- #
     def create_stopwatch_tab(self):
         
-        self.notebook.add(tab, text="Stopwatch")
+       
 
         self.running = False
         self.start_time = None
