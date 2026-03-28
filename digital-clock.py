@@ -116,7 +116,7 @@ class ClockApp:
 
     # ---------------- STOPWATCH ---------------- #
     def create_stopwatch_tab(self):
-        tab = ttk.Frame(self.notebook)
+        
         self.notebook.add(tab, text="Stopwatch")
 
         self.running = False
