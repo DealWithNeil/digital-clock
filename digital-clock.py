@@ -94,7 +94,7 @@ class ClockApp:
     # ---------------- WORLD TIME ---------------- #
     def create_world_time_tab(self):
         
-        self.notebook.add(tab, text="World Time")
+        
 
         self.city_var = tk.StringVar(value="UTC")
 
