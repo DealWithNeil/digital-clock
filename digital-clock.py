@@ -257,8 +257,7 @@ def update_timer_ring(self):
 
     # ---------------- ALARM ---------------- #
     def create_alarm_tab(self):
-        tab = ttk.Frame(self.notebook)
-        self.notebook.add(tab, text="Alarm")
+        
 
         ttk.Label(tab, text="Set Alarm (HH:MM:SS)").pack(pady=10)
 
