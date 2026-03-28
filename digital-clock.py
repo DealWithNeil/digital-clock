@@ -155,7 +155,7 @@ class ClockApp:
 
     # ---------------- TIMER ---------------- #
     def create_timer_tab(self):
-        tab = ttk.Frame(self.notebook)
+        
         self.notebook.add(tab, text="Timer")
 
         ttk.Label(tab, text="Seconds").pack(pady=10)
