@@ -67,8 +67,8 @@ class ClockApp:
 
     # ---------------- CLOCK ---------------- #
     def create_clock_tab(self):
-        tab = ttk.Frame(self.notebook)
-        self.notebook.add(tab, text="Clock")
+        
+        
 
         container = tk.Frame(tab, bg="black")
         container.pack(fill="both", expand=True)
