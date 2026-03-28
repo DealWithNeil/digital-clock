@@ -50,8 +50,6 @@ class ClockApp:
         )
         self.clock_label.pack(expand=True)
 
-        self.show_panel("Clock")
-
         def show_panel(self, name):
            for panel_name, panel in self.panels.items():
                 if panel_name == name:
