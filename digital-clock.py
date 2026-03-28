@@ -223,16 +223,27 @@ class ClockApp:
         except:
             self.timer_canvas.itemconfig(self.timer_text, text="ERR")
 
-    def update_timer_ring(self):
-        if self.remaining_time >= 0:
-            # Update text
-            self.timer_canvas.itemconfig(
-                self.timer_text,
-                text=str(self.remaining_time)
-            )
+def start_timer(self):
+    try:
+        self.total_time = int(self.timer_entry.get())
+        self.remaining_time = self.total_time
+        self.update_timer_ring()
+    except:
+        self.timer_canvas.itemconfig(self.timer_text, text="ERR")
 
+
+def update_timer_ring(self):
+    if self.remaining_time >= 0:
+        # Update text
+        self.timer_canvas.itemconfig(
+            self.timer_text,
+            text=str(self.remaining_time)
+        )
+
+        # Calculate progress (360 degrees)
         progress = (self.remaining_time / self.total_time) * 360
 
+        # Update arc (reverse direction for countdown feel)
         self.timer_canvas.itemconfig(
             self.timer_arc,
             extent=-progress
@@ -240,9 +251,8 @@ class ClockApp:
 
         self.remaining_time -= 1
         self.root.after(1000, self.update_timer_ring)
-            else:
-            
-                self.timer_canvas.itemconfig(self.timer_text, text="TIME UP")
+    else:
+        self.timer_canvas.itemconfig(self.timer_text, text="DONE")
 
 
     # ---------------- ALARM ---------------- #
