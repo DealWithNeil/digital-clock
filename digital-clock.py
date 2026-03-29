@@ -100,14 +100,17 @@ class ClockApp:
 
         cities = ["UTC", "Asia/Manila", "US/Eastern", "Europe/London", "Asia/Tokyo"]
 
-        ttk.Label(tab, text="Select Timezone").pack(pady=10)
+        container = tk.Frame(tab, bg="black")
+        container.pack(fill="both", expand=True)
 
-        ttk.Combobox(tab, values=cities, textvariable=self.city_var).pack(pady=10)
+        ttk.Label(container, text="Select Timezone").pack(pady=10)
 
-        self.world_label = ttk.Label(tab, font=("Segoe UI", 35))
+        ttk.Combobox(container, values=cities, textvariable=self.city_var).pack(pady=10)
+
+        self.world_label = ttk.Label(container, font=("Segoe UI", 35))
         self.world_label.pack(pady=40)
 
-        ttk.Button(tab, text="Show Time", command=self.show_world_time).pack()
+        ttk.Button(container, text="Show Time", command=self.show_world_time).pack()
 
     def show_world_time(self):
         tz = pytz.timezone(self.city_var.get())
@@ -229,9 +232,9 @@ def start_timer(self):
         self.remaining_time = self.total_time
         self.update_timer_ring()
     except:
-        self.timer_canvas.itemconfig(self.timer_text, text="ERR")
+         self.timer_canvas.itemconfig(self.timer_text, text="ERR")
 
-
+   
 def update_timer_ring(self):
     if self.remaining_time >= 0:
         # Update text
