@@ -232,6 +232,7 @@ def start_timer(self):
         self.remaining_time = self.total_time
         self.update_timer_ring()
     except:
+        
          self.timer_canvas.itemconfig(self.timer_text, text="ERR")
 
    
