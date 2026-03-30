@@ -63,7 +63,7 @@ class ClockApp:
         self.create_world_time_tab()
         self.create_stopwatch_tab()
         self.create_timer_tab()
-        self.create_alarm_tab()
+        
 
     # ---------------- CLOCK ---------------- #
     def create_clock_tab(self):
