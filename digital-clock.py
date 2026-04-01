@@ -60,7 +60,7 @@ class ClockApp:
                     panel.lower()  # send to back
 
         self.create_clock_tab()
-        self.create_world_time_tab()
+        
         
         
         
