@@ -61,7 +61,7 @@ class ClockApp:
 
         self.create_clock_tab()
         self.create_world_time_tab()
-        self.create_stopwatch_tab()
+        
         
         
 
