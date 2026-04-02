@@ -59,7 +59,7 @@ class ClockApp:
                 else:
                     panel.lower()  # send to back
 
-        self.create_clock_tab()
+        
         
         
         
