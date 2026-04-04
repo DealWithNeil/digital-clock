@@ -78,17 +78,6 @@ class ClockApp:
     def create_clock_ui(self):
         panel = self.panels["Clock"]
 
-        self.clock_label = tk.Label(
-            panel,
-            text="00 ● 00 ● 00",
-            fg="white",
-            bg="black",
-            font=("Courier", 50, "bold"),
-        )
-        self.clock_label.pack(expand=True)
-
-        self.update_clock()
-
     def update_clock(self):
         now = datetime.now()
 
