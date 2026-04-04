@@ -82,6 +82,11 @@ class ClockApp:
         now = datetime.now()
 
         self.clock_canvas = tk.Canvas(
+            panel,
+            bg="black",
+            highlightthickness=0
+        )
+        
         sep = " ● " if now.second % 2 == 0 else "   "
         time_str = now.strftime(f"%H{sep}%M{sep}%S")
 
