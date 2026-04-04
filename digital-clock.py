@@ -88,14 +88,14 @@ class ClockApp:
         self.update_clock()
 
     def update_clock(self):
-        now = datetime.now().strftime("%H%M%S")
-        
-        self.clock_canvas.delete("all")
+    now = datetime.now().strftime("%H%M%S")
 
-        x_offset = 20
-        y_offset = 50
-        dot_size = 8
-        spacing = 4
+    self.clock_canvas.delete("all")
+
+    x_offset = 20
+    y_offset = 50
+    dot_size = 8
+    spacing = 4
 
         for digit in now:
             pattern = DIGITS[digit]
