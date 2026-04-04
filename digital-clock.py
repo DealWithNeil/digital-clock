@@ -75,7 +75,7 @@ class ClockApp:
                 panel.lower()
 
     # ---------------- CLOCK ---------------- #
-    def create_clock_ui(self):
+    
         panel = self.panels["Clock"]
 
         self.clock_label = tk.Label(
