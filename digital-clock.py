@@ -88,6 +88,8 @@ class ClockApp:
         )
         self.clock_canvas.pack(expand=True, fill="both")
 
+        self.update_clock()
+
         
         sep = " ● " if now.second % 2 == 0 else "   "
         time_str = now.strftime(f"%H{sep}%M{sep}%S")
