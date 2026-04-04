@@ -88,21 +88,34 @@ class ClockApp:
         self.update_clock()
 
     def update_clock(self):
-        now = datetime.now()
+        now = datetime.now().strftime("%H%M%S")
+        
+        self.clock_canvas.delete("all")
 
-        self.clock_canvas = tk.Canvas(
-            panel,
-            bg="black",
-            highlightthickness=0
-        )
-        self.clock_canvas.pack(expand=True, fill="both")
+        x_offset = 20
+        y_offset = 50
+        dot_size = 8
+        spacing = 4
 
-        self.update_clock()
+        for digit in now:
+            pattern = DIGITS[digit]
 
-        sep = " ● " if now.second % 2 == 0 else "   "
-        time_str = now.strftime(f"%H{sep}%M{sep}%S")
+            for row in range(5):
+                for col in range(3):
+                    if pattern[row][col] == "1":
+                        x = x_offset + col * (dot_size + spacing)
+                        y = y_offset + row * (dot_size + spacing)
 
-        self.clock_label.config(text=time_str)
+                        self.clock_canvas.create_oval(
+                            x, y,
+                            x + dot_size,
+                            y + dot_size,
+                            fill="white",
+                            outline=""
+                        )
+
+            x_offset += 3 * (dot_size + spacing) + 20  # space between digits
+
         self.root.after(1000, self.update_clock)
 
     # ---------------- WORLD TIME ---------------- #
