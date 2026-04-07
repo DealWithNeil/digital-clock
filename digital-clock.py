@@ -97,9 +97,13 @@ class ClockApp:
         dot_size = 8
         spacing = 4
 
-        for digit in now:
-            pattern = DIGITS[digit]
+        import math
+        glow = int((math.sin(self.glow_phase) + 1) * 127)  # 0–254
+        color = f"#{glow:02x}{glow:02x}{glow:02x}"
 
+        for digit in now:
+        pattern = DIGITS[digit]
+        
             for row in range(5):
                 for col in range(3):
                     if pattern[row][col] == "1":
