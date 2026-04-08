@@ -102,7 +102,7 @@ class ClockApp:
         color = f"#{glow:02x}{glow:02x}{glow:02x}"
 
         for digit in now:
-        pattern = DIGITS[digit]
+            pattern = DIGITS[digit]
         
             for row in range(5):
                 for col in range(3):
