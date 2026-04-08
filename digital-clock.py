@@ -161,7 +161,6 @@ class ClockApp:
         ttk.Button(frame, text="Stop", command=self.stop_stopwatch).grid(row=0, column=1, padx=5)
         ttk.Button(frame, text="Reset", command=self.reset_stopwatch).grid(row=0, column=2, padx=5)
 
-
     def start_stopwatch(self):
         if not self.running:
             self.running = True
