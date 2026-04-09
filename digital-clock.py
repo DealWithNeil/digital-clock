@@ -84,7 +84,6 @@ class ClockApp:
             highlightthickness=0
         )
         self.clock_canvas.pack(expand=True, fill="both")
-
         self.update_clock()
 
     def update_clock(self):
