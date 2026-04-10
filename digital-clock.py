@@ -86,6 +86,7 @@ class ClockApp:
         self.clock_canvas.pack(expand=True, fill="both")
         self.update_clock()
 
+
     def update_clock(self):
         now = datetime.now().strftime("%H%M%S")
 
