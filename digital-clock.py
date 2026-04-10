@@ -121,6 +121,7 @@ class ClockApp:
             x_offset += 3 * (dot_size + spacing) + 20  # space between digits
 
         self.root.after(1000, self.update_clock)
+        
 
     # ---------------- WORLD TIME ---------------- #
     def create_world_time_ui(self):
