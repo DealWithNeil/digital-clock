@@ -63,7 +63,7 @@ class ClockApp:
         self.create_stopwatch_ui()
         self.create_timer_ui()
         self.create_alarm_ui()
-
+        self.glow_phase = 0
         self.show_panel("Clock")
 
     # ---------------- PANEL SWITCH ---------------- #
