@@ -102,7 +102,7 @@ class ClockApp:
         self.glow_phase += 0.15
 
         glow = int((math.sin(self.glow_phase) + 1) * 127)  # 0–254
-        color = f"#{glow:02x}{glow:02x}{glow:02x}"
+        
 
         for digit in now:
             pattern = DIGITS[digit]
