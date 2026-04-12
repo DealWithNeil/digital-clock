@@ -88,6 +88,7 @@ class ClockApp:
 
 
     def update_clock(self):
+        import math
         now = datetime.now().strftime("%H%M%S")
 
         self.clock_canvas.delete("all")
