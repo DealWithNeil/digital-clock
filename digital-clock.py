@@ -88,7 +88,7 @@ class ClockApp:
 
 
     def update_clock(self):
-        
+
         import math
         now = datetime.now().strftime("%H%M%S")
 
@@ -99,7 +99,8 @@ class ClockApp:
         dot_size = 8
         spacing = 4
 
-        import math
+        self.glow_phase += 0.15
+
         glow = int((math.sin(self.glow_phase) + 1) * 127)  # 0–254
         color = f"#{glow:02x}{glow:02x}{glow:02x}"
 
