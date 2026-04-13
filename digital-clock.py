@@ -103,7 +103,6 @@ class ClockApp:
 
         glow = int((math.sin(self.glow_phase) + 1) * 127)  # 0–254
         
-
         for digit in now:
             pattern = DIGITS[digit]
         
