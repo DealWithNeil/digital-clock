@@ -265,7 +265,6 @@ class ClockApp:
 
         ttk.Label(popup, text="⏰ Wake up!", font=("Segoe UI", 20)).pack(pady=30)
         ttk.Button(popup, text="OK", command=popup.destroy).pack()
-
 # RUN
 if __name__ == "__main__":
     root = ttk.Window(themename="darkly")
