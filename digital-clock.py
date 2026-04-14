@@ -24,6 +24,7 @@ class ClockApp:
         self.root.title("Modern Clock")
         self.root.geometry("500x650")
         self.root.resizable(False, False)
+        self.glow_phase = 0
 
         # MAIN CONTAINER
         self.main_container = tk.Frame(root, bg="black")
@@ -63,7 +64,6 @@ class ClockApp:
         self.create_stopwatch_ui()
         self.create_timer_ui()
         self.create_alarm_ui()
-        self.glow_phase = 0
         self.show_panel("Clock")
 
     # ---------------- PANEL SWITCH ---------------- #
@@ -212,9 +212,11 @@ class ClockApp:
     def start_timer(self):
         try:
             self.total_time = int(self.timer_entry.get())
+            if self.total_time <= 0:
+                raise ValueError("Timer value must be positive")
             self.remaining_time = self.total_time
             self.update_timer()
-        except:
+        except (TypeError, ValueError):
             self.timer_canvas.itemconfig(self.timer_text, text="ERR")
 
     def update_timer(self):
