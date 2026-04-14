@@ -86,7 +86,6 @@ class ClockApp:
         self.clock_canvas.pack(expand=True, fill="both")
         self.update_clock()
 
-
     def update_clock(self):
 
         import math
