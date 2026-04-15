@@ -120,7 +120,14 @@ class ClockApp:
         spacing = 4
 
         # Advance the phase value for the subtle glow animation logic.
-        self.glow_phase += 0.15
+        self.glow_phase += 0.2
+
+        # Blend between a dim cyan and a bright white-blue to create a pulse.
+        pulse = (math.sin(self.glow_phase) + 1) / 2
+        glow_value = int(120 + (135 * pulse))
+        edge_value = int(30 + (110 * pulse))
+        glow_color = f"#{edge_value:02x}{glow_value:02x}{glow_value:02x}"
+        core_color = f"#{glow_value:02x}{glow_value:02x}ff"
 
         glow = int((math.sin(self.glow_phase) + 1) * 127)  # 0–254
         
@@ -136,6 +143,20 @@ class ClockApp:
                         x = x_offset + col * (dot_size + spacing)
                         y = y_offset + row * (dot_size + spacing)
 
+                        # Layer dim circles behind the main dot to fake
+                        # a soft neon glow using tkinter's solid-color canvas.
+                        self.clock_canvas.create_oval(
+                            x - 4, y - 4,
+                            x + dot_size + 4, y + dot_size + 4,
+                            fill=glow_color,
+                            outline=""
+                        )
+                        self.clock_canvas.create_oval(
+                            x - 2, y - 2,
+                            x + dot_size + 2, y + dot_size + 2,
+                            fill=core_color,
+                            outline=""
+                        )
                         self.clock_canvas.create_oval(
                             x, y,
                             x + dot_size,
@@ -146,8 +167,8 @@ class ClockApp:
 
             x_offset += 3 * (dot_size + spacing) + 20  # space between digits
 
-        # Refresh once per second so the displayed time stays current.
-        self.root.after(1000, self.update_clock)
+        # Refresh several times per second so the glow animation looks smooth.
+        self.root.after(80, self.update_clock)
         
 
     # ---------------- WORLD TIME ---------------- #
