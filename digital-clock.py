@@ -129,7 +129,7 @@ class ClockApp:
         glow_color = f"#{edge_value:02x}{glow_value:02x}{glow_value:02x}"
         core_color = f"#{glow_value:02x}{glow_value:02x}ff"
 
-        glow = int((math.sin(self.glow_phase) + 1) * 127)  # 0–254
+        
         
         # Draw each digit from left to right.
         for digit in now:
