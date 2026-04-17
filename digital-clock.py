@@ -192,7 +192,11 @@ class ClockApp:
 
     def show_world_time(self):
         """Look up the selected timezone and display its current time."""
-        
+        try:
+            tz = pytz.timezone(self.city_var.get())
+        except pytz.UnknownTimeZoneError:
+            self.world_label.config(text="Invalid TZ")
+        return
         time_now = datetime.now(tz).strftime("%H:%M:%S")
         self.world_label.config(text=time_now)
 
